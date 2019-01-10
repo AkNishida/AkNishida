@@ -1,2 +1,83 @@
 #このページを使うと便利
-#https://paiza.jp/works/python3/primer/beginner-python2/4012
+https://paiza.jp/works/python3/primer/beginner-python2/4012
+
+###########################################
+https://paiza.jp/challenges/74/show
+###########################################未提出
+import sys
+array = [] 
+for line in sys.stdin.readlines():
+    array.append(line.rstrip().split(' ')) 
+#print(array) 
+initial_N=int(array[0][0])
+#print(initial_N)
+#event_M=(array[0][1])
+#print(event_M)
+array_r=array[1:]
+#print(array_r)
+#array_r2=array_r.remove( ['use', 'the', 'back', 'button'])
+#print(array_r2)
+a=2
+#print(array_r[a-1])
+array_r2 = []
+for y in array_r:
+    #print(y)
+    if y == ['use', 'the', 'back', 'button']:
+        pass
+    else:
+        array_r2.append(y)
+#print(array_r2)
+
+number=0
+for i in array_r:
+    #print(i)
+    if i == ['go', 'to', 'blank', 'page']:
+        print("blank page")
+        number=number+1
+        #print(number)
+        #print(i[2-1:])
+    else:
+        if "go" in i:
+            l=i[2:]
+            if len(l)==2:
+                s1 =l[0]
+                s2 =l[1]
+                for b in l:
+                    s1 =l[0]
+                    s2 =l[1]
+                print(s1+" "+s2)
+                number=number+1
+                #print(number)
+            else:
+                #print(l)
+                s =''.join(l)
+                print(s)
+                number=number+1
+                #print(number)
+            #for x in i[2:]:+
+                #print(x)
+                #array_rrr.append(x)
+            #print(array_rrr)
+            #number=number+1
+            #print(str(number)+"これ？")
+        else:
+            number=number-1
+            if number == 1:
+                print("blank page")
+                #print(number)
+            else:
+                hyouzi = array_r2[number-1][2:]
+                if len(hyouzi)==2:
+                    s3 =hyouzi[0]
+                    s4 =hyouzi[1]
+                    for b in hyouzi:
+                        s3 =hyouzi[0]
+                        s4 =hyouzi[1]
+                    print(s3+" "+s4)
+                else:
+                    #print(l)
+                    s5 =''.join(hyouzi)
+                    print(s5)
+                #print(number)
+
+###########################################
